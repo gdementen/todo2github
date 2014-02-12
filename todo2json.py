@@ -72,7 +72,7 @@ def convert(inpath, outpath, assignee=None, milestone=None):
             issues.append(issue)
         pos += 1
     with open(outpath, 'w') as f:
-        json.dump(issues, f)
+        json.dump(issues, f, indent=4, sort_keys=True)
 
 
 if __name__ == '__main__':
