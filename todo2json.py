@@ -71,6 +71,7 @@ def convert(inpath, outpath, assignee=None, milestone=None):
                 issue['milestone'] = milestone
             issues.append(issue)
         pos += 1
+
     with open(outpath, 'w') as f:
         json.dump(issues, f, indent=4, sort_keys=True)
 
